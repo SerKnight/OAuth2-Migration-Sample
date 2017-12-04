@@ -6,4 +6,4 @@
 2. python migration.py
 
 ### Configuration
-Enter consumer tokens and OAuth1 access tokens in oauth1_tokens dictinoary
+Enter consumer tokens and OAuth1 access tokens in oauth1_tokens dictionary in ```config.json```
