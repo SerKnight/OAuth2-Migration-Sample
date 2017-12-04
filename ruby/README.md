@@ -1,9 +1,9 @@
 # OAuth2-Migration-Sample
 ### Dependency gems:
-typhoeus
-oauth
-json
-yaml
+1. typhoeus
+2. oauth
+3. json
+4. yaml
 
 ### Steps to run:
 ruby migration.rb
