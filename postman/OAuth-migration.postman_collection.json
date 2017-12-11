@@ -1,0 +1,52 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OAuth-migration",
+		"_postman_id": "ffdf18ed-11eb-0297-9121-1116e9a4dbf8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OAuth migration API",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": {
+						"consumerKey": "{{consumerSecret}}",
+						"consumerSecret": "{{consumerSecret}}",
+						"token": "{{accessToken}}",
+						"tokenSecret": "{{accessSecret}}",
+						"signatureMethod": "HMAC-SHA1",
+						"timestamp": "",
+						"nonce": "",
+						"version": "1.0",
+						"realm": "",
+						"addParamsToHeader": true,
+						"addEmptyParamsToSign": false
+					}
+				},
+				"url": "https://developer.api.intuit.com/v2/oauth2/tokens/migrate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Intuit-oauth-migration-postman-collection",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"scope\":\"com.intuit.quickbooks.accounting\",\n\t\"redirect_uri\":\"https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl\"\n}"
+				},
+				"description": "API to migrate OAuth1 accessToken and accessSecret to OAuth2 accessToken\n\nURL: /v2/oauth2/token/migrate"
+			},
+			"response": []
+		}
+	]
+}
