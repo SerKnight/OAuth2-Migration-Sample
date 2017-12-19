@@ -13,12 +13,15 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.json.JSONObject;
+import org.slf4j.LoggerFactory;
 
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 
 public class OAuth2Migration {
     
+	private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(OAuth2Migration.class);
+	
     private static final CloseableHttpClient CLIENT = HttpClientBuilder.create().build();
     static Properties prop = new Properties();
 	
@@ -50,18 +53,23 @@ public class OAuth2Migration {
 		    post.setHeader("Content-Type", "application/json");
 		    
 		    // add post data
-		    String json =  new JSONObject().put("scope","com.intuit.quickbooks.accounting").put("redirect_uri", prop.getProperty("redirectUrl")).toString();
+		    String json =  new JSONObject().put("scope",prop.getProperty("scope"))
+		    				.put("redirect_uri", prop.getProperty("redirectUrl"))
+		    				.put("client_id", prop.getProperty("clientId"))
+		    				.put("client_secret", prop.getProperty("clientSecret"))
+		    				.toString();
 		    HttpEntity entity = new StringEntity(json, "UTF-8");
 		    post.setEntity(entity);
 		    
 		    HttpResponse response = CLIENT.execute(post);
 		    
 		    //print response
-		    System.out.println(response.getStatusLine().toString());
-		    System.out.println(getResult(response));
+		    LOG.info("Response status:::" + response.getStatusLine().toString());
+		    LOG.info(getResult(response).toString());
+		   
 	        
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			LOG.error("Exception calling migrate API" + ex.getMessage());
 		} 
  	         
     }

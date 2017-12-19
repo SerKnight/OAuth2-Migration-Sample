@@ -42,7 +42,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"scope\":\"com.intuit.quickbooks.accounting\",\n\t\"redirect_uri\":\"https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl\"\n}"
+					"raw": "{\n\t\"scope\":\"com.intuit.quickbooks.accounting\",\n\t\"redirect_uri\":\"https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl\",\n\t\"client_id\":\"enter oauth2 client id\",\n\t\"client_secret\":\"enter oauth2 client secret\"\n}"
 				},
 				"description": "API to migrate OAuth1 accessToken and accessSecret to OAuth2 accessToken\n\nURL: /v2/oauth2/token/migrate"
 			},
