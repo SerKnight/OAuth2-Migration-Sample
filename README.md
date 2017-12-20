@@ -11,9 +11,10 @@ Note: This sample is not applicable for OAuth2 accounts and apps or an OAuth1 ap
 
 ## Migration API input parameters
 
-1. Tokens: The migration API requires your OAuth1 - consumerKey, consumerSecret, accessToken and accessSecret to provide as input to the API.
-2. Scope: Depending on what scope was used for your OAuth1 tokens (eg: QuickBooks and/or Payments), pass com.intuit.quickbooks.accounting or com.intuit.quickbooks.payment as scope to the migration API
+1. OAuth1 Tokens: The migration API requires the OAuth1 - consumerKey, consumerSecret, accessToken and accessSecret in the authorization header.
+2. Scope: Depending on what scope was used for your OAuth1 tokens (eg: QuickBooks and/or Payments), pass com.intuit.quickbooks.accounting or com.intuit.quickbooks.payment or both as scope to the migration API
 3. Redirect URI: Make sure the redirect URL specified in the "Redirect URI" section of your OAuth2 keys tab is the same that you will pass in the "redirect_uri" parameter of the migration API.
+4. OAuth2 client id and secret: These are available in the OAuth2 keys tab of your app. These need to be sent in the POST request json along with scope and redirect url
 
 ## Samples
 
