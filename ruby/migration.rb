@@ -20,7 +20,10 @@ def migrate_tokens()
 		headers: { 'Content-Type' => 'application/json' },
 		body: {
         	scope:'com.intuit.quickbooks.accounting',
-        	redirect_uri:'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl'
+        	redirect_uri:'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl',
+        	client_id: CONFIG['oauth2_client_id'],
+        	client_secret: CONFIG['oauth2_client_secret']
+
     	}.to_json
 	}
 

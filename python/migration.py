@@ -15,7 +15,9 @@ def migrate_tokens():
     )
     body = {
         'scope':'com.intuit.quickbooks.accounting',
-        'redirect_uri':'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl'
+        'redirect_uri':'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl',
+        'client_id': config['OAuth2ClientId'],
+        'client_secret': config['OAuth2ClientSecret']
     }
     r = requests.post(config['Migration_url'], headers=headers, auth=auth, data=json.dumps(body))
     print ('Migration API call:')

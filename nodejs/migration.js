@@ -23,7 +23,9 @@ function migrateTokens(oauth1Tokens) {
     };
     const body = {
         'scope':'com.intuit.quickbooks.accounting',
-        'redirect_uri':'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl'
+        'redirect_uri':'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl',
+        'client_id': config.OAuth2ClientId,
+        'client_secret': config.OAuth2ClientSecret
     };
     axios.post(config.Migration_url, body, headers).then ( function (response) {
         console.log(response.status);

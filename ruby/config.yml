@@ -5,3 +5,5 @@ access_token: qye2e7pvykSYHZXuQO0oNd5hjaRLwyYjMiuIPic1xm1nmX4n
 access_secret: Y18v9NbsdovBU8HgWBnA5HtL8bydxqNeCjDV8o5h
 migration_url: https://developer-qal.api.intuit.com/v2/oauth2/tokens/migrate
 accounting_base_url: https://quickbooks2-qal.api.intuit.com/
+oauth2_client_id: Q3dAxhLYR7iwx5aa3oeiGCyxZ2jU99W82BltPKUvXymILYr0Kj
+oauth2_client_secret: P6kEaAG8oiTRITOENElwb6ZjaobND4fin7Y3yFhc
