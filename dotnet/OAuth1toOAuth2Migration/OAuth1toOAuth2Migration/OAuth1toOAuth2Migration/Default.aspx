@@ -50,7 +50,13 @@
         Realm =  <%= HttpContext.Current.Session["realm"]  %> <br/>
     
         <asp:HyperLink ID="MigrateOAuth1TokensToOAuth2Tokens" runat="server" href="MigrateTokens.aspx">MigrateOAuth1TokensToOAuth2Tokens</asp:HyperLink><br />
+       
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" href="MigrateTokensUsingSDK.aspx">MigrateOAuth1TokensToOAuth2Tokens_UsingSDK</asp:HyperLink>
+        <br />
       
+
+        
     </div> 
       
         

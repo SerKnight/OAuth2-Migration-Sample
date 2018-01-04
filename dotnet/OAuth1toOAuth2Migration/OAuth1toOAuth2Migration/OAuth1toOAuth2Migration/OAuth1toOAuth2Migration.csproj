@@ -48,10 +48,73 @@
     <Reference Include="DevDefined.OAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a3261f5b4697e67d, processorArchitecture=MSIL">
       <HintPath>..\packages\DevDefined.OAuth.0.2\lib\DevDefined.OAuth.dll</HintPath>
     </Reference>
+    <Reference Include="Intuit.Ipp.Core, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Data, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.DataService, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.DataService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Diagnostics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Exception, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.GlobalTaxService, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.GlobalTaxService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.LinqExtender, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.LinqExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.OAuth2PlatformClient, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.OAuth2PlatformClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.PlatformService, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.QueryFilter, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.QueryFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.ReportService, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.ReportService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Retry, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Retry.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Security, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Utility, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.WebHooksService, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\QuickBooks-V3-DotNET-SDK.git\IPPDotNetDevKitCSV3\SDK Assemblies\Intuit.Ipp.WebHooksService.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,9 +137,6 @@
     </Reference>
     <Reference Include="AspNet.ScriptManager.bootstrap">
       <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
@@ -104,9 +164,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ApplicationInsights">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
@@ -147,6 +204,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MigrateTokens.aspx" />
+    <Content Include="MigrateTokensUsingSDK.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -214,6 +272,13 @@
     </Compile>
     <Compile Include="MigrateTokens.aspx.designer.cs">
       <DependentUpon>MigrateTokens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MigrateTokensUsingSDK.aspx.cs">
+      <DependentUpon>MigrateTokensUsingSDK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MigrateTokensUsingSDK.aspx.designer.cs">
+      <DependentUpon>MigrateTokensUsingSDK.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">

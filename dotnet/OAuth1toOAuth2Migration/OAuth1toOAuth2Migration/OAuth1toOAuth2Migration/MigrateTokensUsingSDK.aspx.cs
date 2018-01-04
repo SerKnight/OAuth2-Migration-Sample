@@ -16,7 +16,7 @@ using Intuit.Ipp.Security;
 
 namespace OAuth1toOAuth2Migration
 {
-    public partial class MigrateTokens : System.Web.UI.Page
+    public partial class MigrateTokensUsingSDK : System.Web.UI.Page
     {
         public string migrateUrl = ConfigurationManager.AppSettings["migrateUrl"];
         public string qboBaseUrl = ConfigurationManager.AppSettings["qboBaseUrl"];
@@ -26,8 +26,7 @@ namespace OAuth1toOAuth2Migration
         public string redirectUrl = ConfigurationManager.AppSettings["redirectUrl"];
 
         public string logPath = ConfigurationManager.AppSettings["logPath"];
-        string accessTokenOAuth2 = "";
-        string refreshTokenOAuth2 = "";
+
         string realmId = "";
 
 
@@ -39,159 +38,27 @@ namespace OAuth1toOAuth2Migration
             string consumerKey = HttpContext.Current.Session["consumerKey"].ToString();
             string consumerSecret = HttpContext.Current.Session["consumerSecret"].ToString();
 
-            OAuthRequestValidator o = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
-           
-            MigrateTokensOAuth1ToOAuth2(consumerKey, consumerSecret, accessToken, accessTokenSecret, realmId, clientId, clientSecret, scopes, redirectUrl);
-           
+            //Oauth1 validator 
+            OAuthRequestValidator oauthValidator = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
+
+            //Calling Oauth1 to Oauth2 migration helper
+            OAuth1ToOAuth2TokenMigrationHelper objMigrationHelper = new OAuth1ToOAuth2TokenMigrationHelper();
+          
+            MigratedTokenResponse oauth2Tokens = objMigrationHelper.GetOAuth2Tokens(scopes, redirectUrl, clientId, clientSecret, oauthValidator);
+
+            if (oauth2Tokens.HttpStatusCode == HttpStatusCode.OK)
+            {
+                output("Oauth1 tokens migrated to oauth2 ones successfully!");
+                //Making QBO API call
+                output("Making QBO Api call!");
+                TestQBOCallUsingOAuth2Token(oauth2Tokens.AccessToken, oauth2Tokens.RefreshToken, oauth2Tokens.RealmId);
+            }
+            else
+            {
+                output("Oauth1 tokens migrated to oauth2 ones failed!");
+            }
         }
 
-        /// <summary>
-        /// Migrate OAuth1 tokens to OAuth2
-        /// </summary>
-        /// <param name="consumerKey"></param>
-        /// <param name="consumerSecret"></param>
-        /// <param name="accessToken"></param>
-        /// <param name="accessTokenSecret"></param>
-        /// <param name="realmId"></param>
-        public void MigrateTokensOAuth1ToOAuth2(string consumerKey, string consumerSecret, string accessToken, string accessTokenSecret, string realmId, string clientID, string clientSecret, string scopes, string redirectUrl)
-        {
-            try
-            {
-                string uri = migrateUrl;
-                HttpWebRequest httpWebRequest = WebRequest.Create(uri) as HttpWebRequest;
-                httpWebRequest.Method = "POST";
-                httpWebRequest.ContentType = "application/json";
-                string oAuth1header = GetDevDefinedOAuthHeader(consumerKey, consumerSecret, accessToken, accessTokenSecret, httpWebRequest, null);
-       
-                httpWebRequest.Headers[HttpRequestHeader.Authorization] = oAuth1header;
-
-                
-                string requestBody = "{\"scope\":\""+scopes+"\",\"redirect_uri\":\""+redirectUrl+"\",\"client_id\":\""+clientId+"\",\"client_secret\":\""+clientSecret+"\"}";
-                UTF8Encoding encoding = new UTF8Encoding();
-                byte[] content = encoding.GetBytes(requestBody.ToString());
-                using (var stream = httpWebRequest.GetRequestStream())
-                {
-                    stream.Write(content, 0, content.Length);
-                }
-
-
-                HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
-
-                using (Stream data = httpWebResponse.GetResponseStream())
-                {
-                    if (httpWebResponse.StatusCode == HttpStatusCode.OK)//200
-                    {
-
-                        output("OAuth1 tokens successfully migrated to OAuth2");
-                        //return response
-                        string OAuth2Tokens= new StreamReader(data).ReadToEnd();
-
-                        Dictionary<string, string> oAuth2TokenDecoded = JsonConvert.DeserializeObject<Dictionary<string, string>>(OAuth2Tokens);
-
-                        if (oAuth2TokenDecoded.ContainsKey("refresh_token"))
-                        {
-                            //save the refresh token in persistent store so that it can be used to refresh short lived access tokens
-                            output("Refresh token for OAuth2 obtained.");
-                            refreshTokenOAuth2 = oAuth2TokenDecoded["refresh_token"];
-                            Session["refreshTokenOAuth2"] = refreshTokenOAuth2;
-
-
-                            if (oAuth2TokenDecoded.ContainsKey("access_token"))
-                            {
-                                output("Access token for OAuth2 obtained.");
-                                accessTokenOAuth2 = oAuth2TokenDecoded["access_token"];
-                                Session["accessTokenOAuth2"] = accessTokenOAuth2;
-
-                                //Deserialize json and get OAuth2 tokens
-                                TestQBOCallUsingOAuth2Token(accessTokenOAuth2, refreshTokenOAuth2, realmId);
-                            }
-                        }
-
-                    }
-                    else if (httpWebResponse.StatusCode == HttpStatusCode.BadRequest)//400
-                    {
-                        output("Migration unsuccessful");
-                        string OAuth2TokensError = new StreamReader(data).ReadToEnd(); new StreamReader(data).ReadToEnd();
-                        Dictionary<string, string> oAuth2TokenDecoded = JsonConvert.DeserializeObject<Dictionary<string, string>>(OAuth2TokensError);
-
-                    }
-                }
-                
-            }
-            catch (WebException ex)
-            {
-                Session.Clear();
-                Session.Abandon();
-                if (ex.Status == WebExceptionStatus.ProtocolError)
-                {
-                    var response = ex.Response as HttpWebResponse;
-                    if (response != null)
-                    {
-
-                        output("HTTP Status: " + response.StatusCode);
-                        var exceptionDetail = response.GetResponseHeader("WWW-Authenticate");
-                        if (exceptionDetail != null && exceptionDetail != "")
-                        {
-                            output(exceptionDetail);
-                            
-                        }
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                        {
-                            // read response body
-                            string responseText = reader.ReadToEnd();
-                            if (responseText != null && responseText != "")
-                            {
-                                output(responseText);
-                                
-                            }
-                        }
-                    }
-
-                }
-                
-            }
-
-        }
-
-        /// <summary>
-        /// Get OAuth1 header
-        /// </summary>
-        /// <param name="consumerKey"></param>
-        /// <param name="consumerSecret"></param>
-        /// <param name="accessToken"></param>
-        /// <param name="accessTokenSecret"></param>
-        /// <param name="webRequest"></param>
-        /// <param name="requestBody"></param>
-        /// <returns></returns>
-        private string GetDevDefinedOAuthHeader(string consumerKey, string consumerSecret, string accessToken, string accessTokenSecret, HttpWebRequest webRequest, string requestBody)
-        {
-            OAuthConsumerContext consumerContext = new OAuthConsumerContext
-            {
-                ConsumerKey = consumerKey,
-                SignatureMethod = SignatureMethod.HmacSha1,
-                ConsumerSecret = consumerSecret,
-                UseHeaderForOAuthParameters = true
-            };
-            //We already have OAuth tokens, so OAuth URIs below are not used - set to example.com
-            OAuthSession oSession = new OAuthSession(consumerContext, "https://www.example.com",
-                                    "https://www.example.com",
-                                    "https://www.example.com");
-            oSession.AccessToken = new TokenBase
-            {
-                Token = accessToken,
-                ConsumerKey = consumerKey,
-                TokenSecret = accessTokenSecret
-            };
-            IConsumerRequest consumerRequest = oSession.Request();
-            consumerRequest = ConsumerRequestExtensions.ForMethod(consumerRequest, webRequest.Method);
-            if (requestBody != null)
-            {
-                consumerRequest = consumerRequest.Post().WithRawContentType(webRequest.ContentType).WithRawContent(System.Text.Encoding.ASCII.GetBytes(requestBody));
-            }
-            consumerRequest = ConsumerRequestExtensions.ForUri(consumerRequest, webRequest.RequestUri);
-            consumerRequest = consumerRequest.SignWithToken();
-            return consumerRequest.Context.GenerateOAuthParametersForHeader();
-        }
 
         /// <summary>
         /// Test QBO call using migrated Oauth2 tokens
@@ -210,8 +77,8 @@ namespace OAuth1toOAuth2Migration
                     string encodedQuery = WebUtility.UrlEncode(query);
 
                     //add qbobase url and query
-                    //string uri = string.Format("https://{0}/v3/company/{1}/query?query={2}", qboBaseUrl, realmId, encodedQuery);
-                    string uri = string.Format("https://{0}/v3/company/{1}/reports/JournalReportFR?journal_code=VT", qboBaseUrl, realmId);
+                    string uri = string.Format("https://{0}/v3/company/{1}/query?query={2}", qboBaseUrl, realmId, encodedQuery);
+                    //string uri = string.Format("https://{0}/v3/company/{1}/reports/JournalReportFR?journal_code=VT", qboBaseUrl, realmId);
 
                     // send the request
                     HttpWebRequest qboApiRequest = (HttpWebRequest)WebRequest.Create(uri);
@@ -226,7 +93,7 @@ namespace OAuth1toOAuth2Migration
                     if (qboApiResponse.StatusCode == HttpStatusCode.Unauthorized)//401
                     {
 
-                        //if you get a 401 token expiry then perform token refresh as token is expired/ivnalid
+                        //if you get a 401 token expiry then perform token refresh as token is expired/invalid
                         //performRefreshToken(refreshTokenOAuth2);
 
                         //Retry QBO API call again with new tokens
@@ -245,7 +112,7 @@ namespace OAuth1toOAuth2Migration
                             //QBO call success
                             string responseText = qboApiReader.ReadToEnd();
 
-
+                            output("QBO API call successful!");
 
                         }
 
