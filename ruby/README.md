@@ -5,8 +5,10 @@
 3. json
 4. yaml
 
+### Configuration
+Update [`config.yml`](config.yml) to add OAuth1 consumerkey, consumersecret, accesstoken and accesssecret and OAuth2 clientId, clientSecret
+
 ### Steps to run:
 ruby migration.rb
 
-### Configuration
-Update [`config.yml`](config.yml) to add OAuth1 consumerkey, consumersecret, accesstoken and accesssecret and OAuth2 clientId, clientSecret
+
