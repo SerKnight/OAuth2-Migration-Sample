@@ -2,8 +2,7 @@ require 'oauth/request_proxy/typhoeus_request'
 require 'oauth'
 require 'json'
 require 'yaml'
-
-CONFIG = YAML.load_file("config.yml")
+require_relative 'QBO_request'
 
 def migrate_tokens()
 	@consumer = OAuth::Consumer.new(
@@ -20,7 +19,7 @@ def migrate_tokens()
 		headers: { 'Content-Type' => 'application/json' },
 		body: {
         	scope:'com.intuit.quickbooks.accounting',
-        	redirect_uri:'https://developer-qa.intuit.com/v2/OAuth2Playground/RedirectUrl',
+        	redirect_uri: CONFIG['redirect_uri'],
         	client_id: CONFIG['oauth2_client_id'],
         	client_secret: CONFIG['oauth2_client_secret']
 
@@ -43,25 +42,7 @@ def migrate_tokens()
 	JSON.parse(response.body)
 end
 
-def api_call(access_token, realm_id)
-	url =  CONFIG['accounting_base_url'] + 'v3/company/' + realm_id + '/companyinfo/' + realm_id+'?minorversion=12'
-	options = {
-		method: :get,
-		headers: { 
-			'Content-Type' => 'application/json',
-			'Accept' => 'application/json',
-			'Authorization' => 'Bearer ' + access_token
-		}
-	}
-	req = Typhoeus::Request.new(url, options)
-	req.run
-	response = req.response
-	puts 'Test API call'
-	puts response.code 
-	puts response.headers 
-	puts response.body 
-	JSON.parse(response.body)
-end
-
 oauth2_tokens = migrate_tokens()
+
+# Optionally, make a sample QBO API request
 api_call(oauth2_tokens['access_token'], oauth2_tokens['realmId'])

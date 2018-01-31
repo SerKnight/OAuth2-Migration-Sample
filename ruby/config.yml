@@ -1,9 +1,10 @@
 ## Include correct information about the app and key details
-consumer_key: qye2essx8EYKufegczOgby02Dstn7l
-consumer_secret: D0MXq6GvSN1ZYzGTessdxkJBxvNXluZ258N1eMic
-access_token: qye2e7pvykSYHZXuQO0oNd5hjaRLwyYjMiuIPic1xm1nmX4n
-access_secret: Y18v9NbsdovBU8HgWBnA5HtL8bydxqNeCjDV8o5h
-migration_url: https://developer-qal.api.intuit.com/v2/oauth2/tokens/migrate
-accounting_base_url: https://quickbooks2-qal.api.intuit.com/
-oauth2_client_id: Q3dAxhLYR7iwx5aa3oeiGCyxZ2jU99W82BltPKUvXymILYr0Kj
-oauth2_client_secret: P6kEaAG8oiTRITOENElwb6ZjaobND4fin7Y3yFhc
+consumer_key: 
+consumer_secret: 
+access_token: 
+access_secret: 
+migration_url: https://developer.api.intuit.com/v2/oauth2/tokens/migrate
+accounting_base_url: https://quickbooks.api.intuit.com/
+oauth2_client_id: 
+oauth2_client_secret: 
+redirect_uri: https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl
