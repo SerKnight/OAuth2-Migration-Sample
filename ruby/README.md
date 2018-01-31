@@ -9,4 +9,4 @@
 ruby migration.rb
 
 ### Configuration
-Enter consumer tokens and OAuth1 access tokens in oauth1_tokens dictionary in ```config.yml```
+Update [`config.yml`](config.yml) to add OAuth1 consumerkey, consumersecret, accesstoken and accesssecret and OAuth2 clientId, clientSecret

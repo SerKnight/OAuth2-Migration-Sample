@@ -6,4 +6,4 @@
 2. npm start
 
 ### Configuration
-Enter consumer tokens and OAuth1 access tokens in Oauth1 json object in ```config.js```
+Update [`config.js`](config.js) to add OAuth1 consumerkey, consumersecret, accesstoken and accesssecret and OAuth2 clientId, clientSecret

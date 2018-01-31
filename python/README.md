@@ -6,4 +6,4 @@
 2. python migration.py
 
 ### Configuration
-Enter consumer tokens and OAuth1 access tokens in oauth1_tokens dictionary in ```config.json```
+Update [`config.json`](config.json) to add OAuth1 consumerkey, consumersecret, accesstoken and accesssecret and OAuth2 clientId, clientSecret
