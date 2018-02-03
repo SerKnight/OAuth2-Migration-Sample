@@ -41,8 +41,6 @@ namespace OAuth1toOAuth2Migration
                 if (queryKeys.Contains("oauth_token"))
                 {
                     ReadToken();
-
-
                 }
             }
             else
@@ -85,7 +83,6 @@ namespace OAuth1toOAuth2Migration
             //Stored in a session for demo purposes.
             //Production applications should securely store the Access Token
             getAccessToken();
-
         }
         //
         #region <<Routines>>
@@ -116,9 +113,6 @@ namespace OAuth1toOAuth2Migration
             IToken accessToken = clientSession.ExchangeRequestTokenForAccessToken((IToken)HttpContext.Current.Session["requestToken"], HttpContext.Current.Session["oauthVerifyer"].ToString());
             HttpContext.Current.Session["accessToken"] = accessToken.Token;
             HttpContext.Current.Session["accessTokenSecret"] = accessToken.TokenSecret;
-
-            
-
         }
         /// <summary>
         /// Do Authorization

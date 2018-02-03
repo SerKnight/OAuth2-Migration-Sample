@@ -42,7 +42,6 @@ namespace OAuth1toOAuth2Migration
             OAuthRequestValidator o = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
            
             MigrateTokensOAuth1ToOAuth2(consumerKey, consumerSecret, accessToken, accessTokenSecret, realmId, clientId, clientSecret, scopes, redirectUrl);
-           
         }
 
         /// <summary>
@@ -65,7 +64,6 @@ namespace OAuth1toOAuth2Migration
        
                 httpWebRequest.Headers[HttpRequestHeader.Authorization] = oAuth1header;
 
-                
                 string requestBody = "{\"scope\":\""+scopes+"\",\"redirect_uri\":\""+redirectUrl+"\",\"client_id\":\""+clientId+"\",\"client_secret\":\""+clientSecret+"\"}";
                 UTF8Encoding encoding = new UTF8Encoding();
                 byte[] content = encoding.GetBytes(requestBody.ToString());
@@ -73,7 +71,6 @@ namespace OAuth1toOAuth2Migration
                 {
                     stream.Write(content, 0, content.Length);
                 }
-
 
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
 
@@ -95,7 +92,6 @@ namespace OAuth1toOAuth2Migration
                             refreshTokenOAuth2 = oAuth2TokenDecoded["refresh_token"];
                             Session["refreshTokenOAuth2"] = refreshTokenOAuth2;
 
-
                             if (oAuth2TokenDecoded.ContainsKey("access_token"))
                             {
                                 output("Access token for OAuth2 obtained.");
@@ -113,10 +109,8 @@ namespace OAuth1toOAuth2Migration
                         output("Migration unsuccessful");
                         string OAuth2TokensError = new StreamReader(data).ReadToEnd(); new StreamReader(data).ReadToEnd();
                         Dictionary<string, string> oAuth2TokenDecoded = JsonConvert.DeserializeObject<Dictionary<string, string>>(OAuth2TokensError);
-
                     }
                 }
-                
             }
             catch (WebException ex)
             {
@@ -127,13 +121,11 @@ namespace OAuth1toOAuth2Migration
                     var response = ex.Response as HttpWebResponse;
                     if (response != null)
                     {
-
                         output("HTTP Status: " + response.StatusCode);
                         var exceptionDetail = response.GetResponseHeader("WWW-Authenticate");
                         if (exceptionDetail != null && exceptionDetail != "")
                         {
                             output(exceptionDetail);
-                            
                         }
                         using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         {
@@ -142,15 +134,11 @@ namespace OAuth1toOAuth2Migration
                             if (responseText != null && responseText != "")
                             {
                                 output(responseText);
-                                
                             }
                         }
                     }
-
                 }
-                
             }
-
         }
 
         /// <summary>
@@ -210,8 +198,7 @@ namespace OAuth1toOAuth2Migration
                     string encodedQuery = WebUtility.UrlEncode(query);
 
                     //add qbobase url and query
-                    //string uri = string.Format("https://{0}/v3/company/{1}/query?query={2}", qboBaseUrl, realmId, encodedQuery);
-                    string uri = string.Format("https://{0}/v3/company/{1}/reports/JournalReportFR?journal_code=VT", qboBaseUrl, realmId);
+                    string uri = string.Format("https://{0}/v3/company/{1}/query?query={2}", qboBaseUrl, realmId, encodedQuery);
 
                     // send the request
                     HttpWebRequest qboApiRequest = (HttpWebRequest)WebRequest.Create(uri);
@@ -220,12 +207,10 @@ namespace OAuth1toOAuth2Migration
                     qboApiRequest.ContentType = "application/json;charset=UTF-8";
                     qboApiRequest.Accept = "*/*";
 
-
                     // get the response
                     HttpWebResponse qboApiResponse = (HttpWebResponse)qboApiRequest.GetResponse();
                     if (qboApiResponse.StatusCode == HttpStatusCode.Unauthorized)//401
                     {
-
                         //if you get a 401 token expiry then perform token refresh as token is expired/ivnalid
                         //performRefreshToken(refreshTokenOAuth2);
 
@@ -234,8 +219,6 @@ namespace OAuth1toOAuth2Migration
                         {
                             TestQBOCallUsingOAuth2Token(Session["accessTokenOAuth2"].ToString(), Session["accessTokenOAuth2"].ToString(), Session["realmId"].ToString());
                         }
-
-
                     }
                     else
                     {
@@ -244,11 +227,7 @@ namespace OAuth1toOAuth2Migration
                         {
                             //QBO call success
                             string responseText = qboApiReader.ReadToEnd();
-
-
-
                         }
-
                     }
                 }
             }
@@ -259,7 +238,6 @@ namespace OAuth1toOAuth2Migration
                     var response = ex.Response as HttpWebResponse;
                     if (response != null)
                     {
-
                         output("HTTP Status: " + response.StatusCode);
                         var exceptionDetail = response.GetResponseHeader("WWW-Authenticate");
                         if (exceptionDetail != null && exceptionDetail != "")
@@ -276,10 +254,8 @@ namespace OAuth1toOAuth2Migration
                             }
                         }
                     }
-
                 }
             }
-
         }
 
 
@@ -290,7 +266,6 @@ namespace OAuth1toOAuth2Migration
         public void output(string logMsg)
         {
             //Console.WriteLine(logMsg);
-
             System.IO.StreamWriter sw = System.IO.File.AppendText(GetLogPath() + "OAuth2SampleAppLogs.txt");
             try
             {
@@ -303,12 +278,8 @@ namespace OAuth1toOAuth2Migration
                 sw.Close();
             }
         }
-
-
         public string GetLogPath()
         {
-
-
             try
             {
                 if (logPath == "")
@@ -321,11 +292,7 @@ namespace OAuth1toOAuth2Migration
             {
                 output("Log error path not found.");
             }
-
             return logPath;
-
-
-
         }
 
         #region code to be used if Refresh token logic needs to be implemented
