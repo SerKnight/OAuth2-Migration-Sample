@@ -31,6 +31,7 @@ dependencies {
     compile("org.json:json:20140107")
     compile("org.slf4j:slf4j-api:1.7.25")
     compile("org.slf4j:slf4j-log4j12:1.7.25")
+    compile (group: 'com.intuit.quickbooks-online', name: 'oauth2-platform-api', version: '4.0.0', classifier: 'jar-with-dependencies') 
     
 }
 
