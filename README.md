@@ -1,3 +1,5 @@
+[![Sample Banner](views/Sample.png)][ss1]
+
 # OAuth2-Migration-Sample
 
 The [Intuit Developer team](https://developer.intuit.com) has written this OAuth Migration Sample App to provide working examples on how to use the OAuth migration API to migrate your OAuth1 accesstoken and accesssecret for a given company to OAuth2 access token.
@@ -27,7 +29,7 @@ Samples are available in the following languages, use the readme within the indi
 * [Ruby](ruby)
 * [Postman](postman)
 
-
+[ss1]: https://help.developer.intuit.com/s/samplefeedback?cid=9010&repoName=OAuth2-Migration-Sample
 
 
 
