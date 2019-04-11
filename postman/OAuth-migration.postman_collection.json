@@ -13,7 +13,7 @@
 				"auth": {
 					"type": "oauth1",
 					"oauth1": {
-						"consumerKey": "{{consumerSecret}}",
+						"consumerKey": "{{consumerKey}}",
 						"consumerSecret": "{{consumerSecret}}",
 						"token": "{{accessToken}}",
 						"tokenSecret": "{{accessSecret}}",
