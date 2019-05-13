@@ -42,7 +42,7 @@ namespace OAuth1toOAuth2Migration
             OAuthRequestValidator oauthValidator = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
 
             //Calling Oauth1 to Oauth2 migration helper
-            OAuth1ToOAuth2TokenMigrationHelper objMigrationHelper = new OAuth1ToOAuth2TokenMigrationHelper();
+            OAuth1ToOAuth2TokenMigrationHelper objMigrationHelper = new OAuth1ToOAuth2TokenMigrationHelper(EnvironmentForMigration.Sandbox);
           
             MigratedTokenResponse oauth2Tokens = objMigrationHelper.GetOAuth2Tokens(scopes, redirectUrl, clientId, clientSecret, oauthValidator);
 
