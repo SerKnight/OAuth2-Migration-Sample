@@ -227,7 +227,7 @@
         </member>
         <member name="P:Intuit.Ipp.Exception.Properties.Resources.EndpointNotFoundExceptionDefaultMessage">
             <summary>
-              Looks up a localized string similar to Service endpoint was not found..
+              Looks up a localized string similar to Ids service endpoint was not found..
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Exception.Properties.Resources.FaultExceptionDefaultMessage">
@@ -305,11 +305,6 @@
               Looks up a localized string similar to Ids Server is too busy..
             </summary>
         </member>
-        <member name="P:Intuit.Ipp.Exception.Properties.Resources.ThrottleExceededExceptionDefaultMessage">
-            <summary>
-              Looks up a localized string similar to throttling is exceeded
-            </summary>
-        </member>
         <member name="P:Intuit.Ipp.Exception.Properties.Resources.ServiceExceptionDefaultMessage">
             <summary>
               Looks up a localized string similar to ServiceException was thrown..
@@ -320,9 +315,14 @@
               Looks up a localized string similar to There was no response from the service..
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Exception.Properties.Resources.ThrottleExceededExceptionDefaultMessage">
+            <summary>
+              Looks up a localized string similar to Throttle Exception was thrown.
+            </summary>
+        </member>
         <member name="P:Intuit.Ipp.Exception.Properties.Resources.ValidationExceptionDefaultMessage">
             <summary>
-              Looks up a localized string similar to ValidationException was thrown..
+              Looks up a localized string similar to Validation Exception was thrown..
             </summary>
         </member>
         <member name="T:Intuit.Ipp.Exception.InvalidParameterException">

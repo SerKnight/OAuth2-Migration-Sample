@@ -238,6 +238,22 @@
             The OnFindByIdAsyncCompleted call back.
             </value>
         </member>
+        <member name="P:Intuit.Ipp.DataService.DataService.OnFindByLevelAsyncCompleted">
+            <summary>
+            Gets or sets the call back event for FindByLevel method in asynchronous call.
+            </summary>
+            <value>
+            The OnFindByLevelAsyncCompleted call back.
+            </value>
+        </member>
+        <member name="P:Intuit.Ipp.DataService.DataService.OnFindByParentIdAsyncCompleted">
+            <summary>
+            Gets or sets the call back event for FindByParentId method in asynchronous call.
+            </summary>
+            /// <value>
+            The OnFindByParentIdAsyncCompleted call back.
+            </value>
+        </member>
         <member name="P:Intuit.Ipp.DataService.DataService.OnGetPdfAsyncCompleted">
             <summary>
             Gets or sets the call back event for GetPdf method in asynchronous call.
@@ -382,6 +398,22 @@
             <param name="entity"> Entity type to Find.</param>    
             <returns> Returns an entity of specified Id.</returns> 
         </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByParentId``1(``0)">
+            <summary>
+            Returns entities by the Parent Id specified, supported for TaxClassification only.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByLevel``1(``0)">
+            <summary>
+            Returns entities by the Level specified, supported for TaxClassification only.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
         <member name="M:Intuit.Ipp.DataService.DataService.FindAll``1(``0,System.Int32,System.Int32)">
             <summary>
             Returns a list of all entities of type T under the specified realm. The realm must be set in the context.
@@ -414,6 +446,20 @@
             <param name="entity">Instance of entity to be retrieved</param>
             <param name="startPosition">The start position.</param>
             <param name="maxResults">The max results.</param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByLevelAsync``1(``0)">
+            <summary>
+            Retrieves specified entities based on passed Level, supported for TaxClassification only.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByParentIdAsync``1(``0)">
+            <summary>
+            Retrieves specified entities based on passed ParentId, supported for TaxClassification only.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
         </member>
         <member name="M:Intuit.Ipp.DataService.DataService.FindByIdAsync``1(``0)">
             <summary>
@@ -506,6 +552,20 @@
             <param name="sender">Rest handler class</param>
             <param name="eventArgs">callback event arguments</param>
         </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByLevelAsyncCompleted(System.Object,Intuit.Ipp.Core.FindAllCallCompletedEventArgs)">
+            <summary>
+            CallBack method for FindByLevelAsync method
+            </summary>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.FindByParentIdAsyncCompleted(System.Object,Intuit.Ipp.Core.FindAllCallCompletedEventArgs)">
+            <summary>
+            CallBack method for FindByParentIdAsync method
+            </summary>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
         <member name="M:Intuit.Ipp.DataService.DataService.GetPdfAsynCompleted(System.Object,Intuit.Ipp.Core.PdfCallCompletedEventArgs)">
             <summary>
             Callback method for GetPdf
@@ -583,6 +643,14 @@
             </summary>
             <param name="entity"> Entity type to Find.</param>    
             <returns> Returns an entity of specified Id.</returns> 
+        </member>
+        <member name="M:Intuit.Ipp.DataService.DataService.PrepareAndExecuteHttpRequest``1(System.String)">
+            <summary>
+            Prepare Http request for Reading Tax Cassification methods
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri"></param>
+            <returns></returns>
         </member>
         <member name="T:Intuit.Ipp.DataService.NamespaceDoc">
             <summary>
@@ -999,6 +1067,22 @@
             <param name="entity"> Entity type to Find.</param>    
             <returns> Returns an entity of specified Id.</returns> 
         </member>
+        <member name="M:Intuit.Ipp.DataService.IDataService.FindByParentId``1(``0)">
+            <summary>
+            Gets a list of all TacClassification entities specified by ParentId under the specified realm. The realm must be set in the context
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns>Returns the list of entities.</returns>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.IDataService.FindByLevel``1(``0)">
+            <summary>
+            Gets a list of all TaxClassification entities specified by Level under the specified realm. The realm must be set in the context
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns>Returns the list of entities.</returns>
+        </member>
         <member name="M:Intuit.Ipp.DataService.IDataService.FindAll``1(``0,System.Int32,System.Int32)">
             <summary>
             Gets a list of all entities of type T under the specified realm. The realm must be set in the context
@@ -1041,7 +1125,12 @@
         </member>
         <member name="F:Intuit.Ipp.DataService.IntuitBatchResponse.cdcResponse">
             <summary>
-            IntuitCDCResponse in case of ResponseType is exception. 
+            IntuitCDCResponse in case of ResponseType is of type CDC. 
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.DataService.IntuitBatchResponse.queryResponse">
+            <summary>
+            QueryResponse in case of ResponseType is of type query. 
             </summary>
         </member>
         <member name="M:Intuit.Ipp.DataService.IntuitBatchResponse.#ctor">
@@ -1077,6 +1166,11 @@
         <member name="P:Intuit.Ipp.DataService.IntuitBatchResponse.CDCResponse">
             <summary>
             Gets or sets the IntuitCDCResponse returned after batch execution
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.DataService.IntuitBatchResponse.QueryResponse">
+            <summary>
+            Gets or sets the QueryResponse returned after batch execution
             </summary>
         </member>
         <member name="M:Intuit.Ipp.DataService.IntuitBatchResponse.AddEntities(Intuit.Ipp.Data.IEntity)">
@@ -1191,6 +1285,11 @@
               Looks up a localized string similar to Exception has been generated: {0}.
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.DataService.Properties.Resources.FieldNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to ParentRef field is null or empty..
+            </summary>
+        </member>
         <member name="P:Intuit.Ipp.DataService.Properties.Resources.IdsLoggerNotNullMessage">
             <summary>
               Looks up a localized string similar to The Ids Logger cannot be null..
@@ -1199,6 +1298,11 @@
         <member name="P:Intuit.Ipp.DataService.Properties.Resources.IdString">
             <summary>
               Looks up a localized string similar to Id.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.DataService.Properties.Resources.OperationNotSupportedOnEntity">
+            <summary>
+              Looks up a localized string similar to This entity does not suppport this opperation. Only supported for TaxClassification.
             </summary>
         </member>
         <member name="P:Intuit.Ipp.DataService.Properties.Resources.PageNumberString">
@@ -1327,6 +1431,16 @@
             Call back event for FindById method.
             </summary>
         </member>
+        <member name="E:Intuit.Ipp.DataService.AsyncService.OnFindByParentIdAsyncCompleted">
+            <summary>
+            Call back event for FindByParentId method.
+            </summary>
+        </member>
+        <member name="E:Intuit.Ipp.DataService.AsyncService.OnFindByLevelAsyncCompleted">
+            <summary>
+            Call back event for FindByLevel method.
+            </summary>
+        </member>
         <member name="E:Intuit.Ipp.DataService.AsyncService.OnGetPdfAsynCompleted">
             <summary>
             Call back event for GetPdf method.
@@ -1350,6 +1464,12 @@
             <param name="entity">The entity for which the data is required.</param>
             <param name="startPosition">The start position.</param>
             <param name="maxResults">The max results.</param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.AsyncService.FindAllAsync``1(``0)">
+            <summary>
+            Gets a list of all entities under the specified realm (asynchronously). The realm must be set in the context.
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="M:Intuit.Ipp.DataService.AsyncService.AddAsync``1(``0)">
             <summary>
@@ -1436,6 +1556,36 @@
             <param name="sender">The sender.</param>
             <param name="eventArgs">The <see cref="T:Intuit.Ipp.Core.AsyncCallCompletedEventArgs"/> instance containing the event data.</param>
         </member>
+        <member name="M:Intuit.Ipp.DataService.AsyncService.FindByLevelAsync``1(``0)">
+            <summary>
+            Calls the asynchronous method to get the required entities specified by Level.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.AsyncService.FindByLevelAsyncCompleted``1(System.Object,Intuit.Ipp.Core.AsyncCallCompletedEventArgs)">
+            <summary>
+            FindByLevelAsync complete call back
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.AsyncService.FindByParentIdAsync``1(``0)">
+            <summary>
+            Calls the asynchronous method to get the required entities specified by ParentId.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.AsyncService.FindByParentIdAsyncCompleted``1(System.Object,Intuit.Ipp.Core.AsyncCallCompletedEventArgs)">
+            <summary>
+            FindByParentIdAsync completed callback
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
         <member name="M:Intuit.Ipp.DataService.AsyncService.CDCAsync(System.Collections.Generic.List{Intuit.Ipp.Data.IEntity},System.DateTime)">
             <summary>
             Calls the asynchronous method to get the required CDC.
@@ -1514,6 +1664,59 @@
             </summary>
             <param name="entity">CDM Entity.</param>
             <returns>True if the type exists or else false.</returns>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.ValidateEntity``1(``0,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Validates if entity is null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="serviceContext"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.ValidateId(System.String,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Validate Id field null or white space for IntuitEntity object
+            </summary>
+            <param name="Id"></param>
+            <param name="serviceContext"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.ValidateEntityType``1(``0,System.String,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Validate if type of entity is same as specified type
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.ValidateObject(System.Object,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Validate if passed object is null
+            </summary>
+            <param name="obj"></param>
+            <param name="serviceContext"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.ValidateIntuitEntity(Intuit.Ipp.Data.IntuitEntity,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Validate if IntuitEntity was converted successfully
+            </summary>
+            <param name="intuitEntity"></param>
+            <param name="serviceContext"></param>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.PrepareByParentId(Intuit.Ipp.Data.IEntity,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Get ParentRef field of given object
+            </summary>
+            <param name="entity"></param>
+            <param name="serviceContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.DataService.ServicesHelper.PrepareByLevel(Intuit.Ipp.Data.IEntity,Intuit.Ipp.Core.ServiceContext)">
+            <summary>
+            Get Level field of given object
+            </summary>
+            <param name="entity"></param>
+            <param name="serviceContext"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

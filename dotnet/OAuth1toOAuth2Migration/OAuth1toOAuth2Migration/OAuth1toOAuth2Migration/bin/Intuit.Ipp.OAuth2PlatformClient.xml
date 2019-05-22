@@ -4,9 +4,225 @@
         <name>Intuit.Ipp.OAuth2PlatformClient</name>
     </assembly>
     <members>
+        <member name="T:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.ClientID">
+            <summary>
+            ClientId
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.ClientSecret">
+            <summary>
+            ClientSecret
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.RedirectURI">
+            <summary>
+            RedirectUri
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.DiscoveryDoc">
+            <summary>
+            DiscoveryDoc
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.ApplicationEnvironment">
+            <summary>
+            AppEnvironment
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.CSRFToken">
+            <summary>
+            CSRFToken
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            OAuth2Client constructor
+            </summary>
+            <param name="clientID"></param>
+            <param name="clientSecret"></param>
+            <param name="redirectURI"></param>
+            <param name="environment"></param>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GetDiscoveryDoc">
+            <summary>
+            Gets Discovery Doc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GetAuthorizationURL(System.Collections.Generic.List{Intuit.Ipp.OAuth2PlatformClient.OidcScopes},System.String)">
+            <summary>
+            Get Authorization Url
+            </summary>
+            <param name="scopes"></param>
+            <param name="CSRFToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GetAuthorizationURL(System.Collections.Generic.List{Intuit.Ipp.OAuth2PlatformClient.OidcScopes})">
+            <summary>
+            Get Authorization Url
+            </summary>
+            <param name="scopes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GetBearerTokenAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets Bearer token from Authorization code
+            </summary>
+            <param name="code"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.RefreshTokenAsync(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Refreshes access token to get new access token
+            </summary>
+            <param name="refreshToken"></param>
+            <param name="extra"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.RevokeTokenAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Revoke token using either access or refresh token
+            </summary>
+            <param name="accessOrRefreshToken"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GetUserInfoAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get User Info
+            </summary>
+            <param name="accessToken"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.ValidateIDTokenAsync(System.String)">
+            <summary>
+            Validates ID token
+            </summary>
+            <param name="idToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.OAuth2Client.GenerateCSRFToken">
+            <summary>
+            Generate random CSRF token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler">
+            <summary>
+            RefreshTokenHandler Class
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.AccessToken">
+            <summary>
+            Gets the current access token
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.RefreshToken">
+            <summary>
+            Gets the current refresh token
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.#ctor(System.String,System.String,System.String,System.String,System.String,System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tokenEndpoint">tokenEndpoint</param>
+            <param name="clientId">clientId</param>
+            <param name="clientSecret">clientSecret</param>
+            <param name="refreshToken">refreshToken</param>
+            <param name="accessToken">accessToken</param>
+            <param name="innerHandler">innerHandler</param>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.#ctor(Intuit.Ipp.OAuth2PlatformClient.TokenClient,System.String,System.String,System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="client">client</param>
+            <param name="refreshToken">refreshToken</param>
+            <param name="accessToken">accessToken</param>
+            <param name="innerHandler">innerHandler</param>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.ClientId">
+            <summary>
+            ClientId
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.ClientSecret">
+            <summary>
+            ClientSecret
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.AuthenticationStyle">
+            <summary>
+            AuthenticationStyle
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Override methos for SendAsync
+            </summary>
+            <param name="request">request</param>
+            <param name="cancellationToken">cancellationToken</param>
+            <returns>Task of HttpResponseMessage</returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.Dispose(System.Boolean)">
+            <summary>
+            Dispose method
+            </summary>
+            <param name="disposing">disposing</param>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.RefreshTokensAsync(System.Threading.CancellationToken)">
+            <summary>
+            RefreshTokeAsync call
+            </summary>
+            <param name="cancellationToken">cancellationToken</param>
+            <returns>Task of bool</returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.RefreshTokenHandler.GetAccessTokenAsync(System.Threading.CancellationToken)">
+            <summary>
+            GetAccessTokeAsync call
+            </summary>
+            <param name="cancellationToken">cancellationToken</param>
+            <returns>Task of string</returns>
+        </member>
         <member name="T:Intuit.Ipp.OAuth2PlatformClient.NamespaceDoc">
             <summary>
             Intuit.Ipp.OAuth2PlatformClient has OAuth2 specific client lib with helper classes for different calls related to getting tokens and managing them.   
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.OAuth2PlatformClient.Helpers.StringValueAttribute">
+            <summary>
+            This attribute is used to represent a string value
+            for a value in an enum.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.OAuth2PlatformClient.Helpers.StringValueAttribute.StringValue">
+            <summary>
+            Holds the stringvalue for a value in an enum.
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.Helpers.StringValueAttribute.#ctor(System.String)">
+            <summary>
+            Constructor used to init a StringValue Attribute
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:Intuit.Ipp.OAuth2PlatformClient.Helpers.AppEnvironment">
+            <summary>
+            AppEnvironment enum
             </summary>
         </member>
         <member name="T:Intuit.Ipp.OAuth2PlatformClient.Base64Url">
@@ -156,12 +372,25 @@
             <param name="authority">authority</param>
             <param name="innerHandler">innerHandler</param>
         </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.DiscoveryClient.#ctor(Intuit.Ipp.OAuth2PlatformClient.Helpers.AppEnvironment)">
+            <summary>
+            DiscoveryClient constructor which takes in app environment
+            </summary>
+            <param name="appEnvironment">authority</param>
+        </member>
         <member name="M:Intuit.Ipp.OAuth2PlatformClient.DiscoveryClient.GetAsync(System.Threading.CancellationToken)">
             <summary>
             GetAsync call for Discovery
             </summary>
             <param name="cancellationToken">cancellationToken</param>
             <returns>Task for Discoverresponse</returns>
+        </member>
+        <member name="M:Intuit.Ipp.OAuth2PlatformClient.DiscoveryClient.Get(System.Threading.CancellationToken)">
+            <summary>
+            Get call for Discovery Document synchronous
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
         </member>
         <member name="T:Intuit.Ipp.OAuth2PlatformClient.DiscoveryPolicy">
             <summary>

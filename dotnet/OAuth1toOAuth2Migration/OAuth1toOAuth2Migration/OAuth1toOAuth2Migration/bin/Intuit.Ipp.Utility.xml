@@ -4,6 +4,256 @@
         <name>Intuit.Ipp.Utility</name>
     </assembly>
     <members>
+        <member name="T:Intuit.Ipp.Utility.CoreConstants">
+            <summary>
+            Constants whose values do not change.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.SLASH_CHAR">
+            <summary>
+            Slash character.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.VERSION">
+            <summary>
+            The Intuit Services Version.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.RESOURCE">
+            <summary>
+            The Resource.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_TEXTXML">
+            <summary>
+            Content type: text/xml.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_TEXTPLAIN">
+            <summary>
+            Content type: text/plain.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_APPLICATIONTEXT">
+            <summary>
+            Content type: application/text.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_APPLICATIONXML">
+            <summary>
+            Content type: application/xml.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_APPLICATIONJSON">
+            <summary>
+            Content type: application/xml.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_APPLICATIONPDF">
+            <summary>
+            Content type: application/pdf.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_APPLICATIONOCTETSTREAM">
+            <summary>
+            Content type: application/pdf.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_URLFORMENCODED">
+            <summary>
+            Content type: application/x-www-form-urlencoded.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.TOKEN_MIGRATION_URL_PROD">
+            <summary>
+            The Base Url for Oauth1 to Oauth2 tokens migration for Prod.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.TOKEN_MIGRATION_REDIRECT_URL">
+            <summary>
+            The Redirect url required by token migration endpoint.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.TOKEN_MIGRATION_URL_SANDBOX">
+            <summary>
+            The Base Url for Oauth1 to Oauth2 tokens migration for sandbox.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.IPS_BASEURL">
+            <summary>
+            The Base Url for IPS.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.QBO_BASEURL">
+            <summary>
+            The Base Url for QBO.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.ENTITLEMENT_BASEURL">
+            <summary>
+            The Base Url for Entitlements API.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.INTUIT_WORKPLACE">
+            <summary>
+            Intuit Workplace Uri. 
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.OAUTHACCESSTOKENURL">
+            <summary>
+            Intuit O Auth Access token Uri. 
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.Id">
+            <summary>
+            Id Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.SYNC_TOKEN">
+            <summary>
+            Sync Token Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.DOMAIN">
+            <summary>
+            Domain Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.METADATA">
+            <summary>
+            MetaData Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.SPARSE">
+            <summary>
+            Sparse Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.STATUS">
+            <summary>
+            Status Parameter Name.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.ID_DOMAIN_QUERY">
+            <summary>
+            Id Domain Query Parameter.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.PAGE_NUM">
+            <summary>
+            Page Number Query Parameter.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.RESULTS_PERPAGE">
+            <summary>
+            Results Per page Query Parameter.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.APIACTIONHEADER">
+            <summary>
+            API Action Header Key.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.ISQBOXPATH">
+            <summary>
+            XPath for IsQbo tag.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.REALMXPATH">
+            <summary>
+            XPath for realm tag.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.API_GETISREALMQBO">
+            <summary>
+            Api for API_GetIsRealmQBO
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.API_GETIDSREALM">
+            <summary>
+            Api for API_GetIDSRealm
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.AUTHORIZATIONSTRING_FORHEADER">
+            <summary>
+            Authorization String For Header.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.INTUITAUTH_HEADERFORMAT">
+            <summary>
+            Intuit Auth header format.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.REQUESTFILENAME_FORMAT">
+            <summary>
+            Request File Name Format.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.RESPONSEFILENAME_FORMAT">
+            <summary>
+            Response File Name Format.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.ERRORRESPONSEFILENAME_FORMAT">
+            <summary>
+            Error Response File Name Format.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.XOAUTHAUTHIDPSEUDONYM">
+            <summary>
+            The o auth auth id pseudonym
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.XOAUTHREALMIDPSEUDONYM">
+            <summary>
+            The o auth realm id pseudonym
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.XOAUTHSERVICEPROVIDERID">
+            <summary>
+            The o auth service provider id
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTENCODING">
+            <summary>
+            The Compression format of the request data.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.ACCEPTENCODING">
+            <summary>
+            The Compression format of the response data.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.REQUESTSOURCEHEADER">
+            <summary>
+            The Request source header value.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTTYPE_MULTIPARTFORMDATAFORMAT">
+            <summary>
+            multipart/form-data format
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTDISPOSITION_FORMAT">
+            <summary>
+            content-disposition format for string data
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTDISPOSITION_FILENAME_FORMAT">
+            <summary>
+            content-disposition format for Filename
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTDISPOSITION_CONTENTTYPE_FORMAT">
+            <summary>
+            content-disposition format for ContentType
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.CoreConstants.CONTENTDISPOSITION_CONTENTTRANSFERENCODING_FORMAT">
+            <summary>
+            content-disposition format for ContentType
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Utility.DateHelper">
             <summary>   
             Helper functions for date-related problems.
@@ -72,6 +322,74 @@
             <param name="name">The name of the child node.</param>
             <param name="node">The child node.</param>
             <returns>Returns xml element.</returns>
+        </member>
+        <member name="T:Intuit.Ipp.Utility.DataCompressionFormat">
+            <summary>
+            Format used to compress data.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.DataCompressionFormat.None">
+            <summary>
+            No compression.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.DataCompressionFormat.GZip">
+            <summary>
+            GZip compression.
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Utility.DataCompressionFormat.Deflate">
+            <summary>
+            Deflate compression.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Utility.DeflateCompressor">
+            <summary>
+            Deflate compressor.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Utility.DeflateCompressor.DataCompressionFormat">
+            <summary>
+            Gets format of the data compression.
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.DeflateCompressor.Compress(System.Byte[],System.IO.Stream)">
+            <summary>
+            Compresses the input byte array into stream.
+            </summary>
+            <param name="content">Input data.</param>
+            <param name="requestStream">Request stream.</param>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.DeflateCompressor.Decompress(System.IO.Stream)">
+            <summary>
+            Decompresses the output response stream.
+            </summary>
+            <param name="responseStream">Response stream.</param>
+            <returns>Decompressed stream.</returns>
+        </member>
+        <member name="T:Intuit.Ipp.Utility.GZipCompressor">
+            <summary>
+            GZip compressor.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Utility.GZipCompressor.DataCompressionFormat">
+            <summary>
+            Gets format of the data compression.
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.GZipCompressor.Compress(System.Byte[],System.IO.Stream)">
+            <summary>
+            Compresses the input byte array into stream.
+            </summary>
+            <param name="content">Input data.</param>
+            <param name="requestStream">Request stream.</param>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.GZipCompressor.Decompress(System.IO.Stream)">
+            <summary>
+            Decompresses the output response stream.
+            </summary>
+            <param name="responseStream">Response stream.</param>
+            <returns>Decompressed stream.</returns>
         </member>
         <member name="T:Intuit.Ipp.Utility.BaseUrlElement">
             <summary>
@@ -639,6 +957,30 @@
             <summary>
               Looks up a localized string similar to n/a.
             </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Utility.ICompressor">
+            <summary>
+            Interface for compression methods.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Utility.ICompressor.DataCompressionFormat">
+            <summary>
+            Gets format of the data compression.
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.ICompressor.Compress(System.Byte[],System.IO.Stream)">
+            <summary>
+            Compresses the input byte array into stream.
+            </summary>
+            <param name="content">Input data.</param>
+            <param name="requestStream">Request stream.</param>
+        </member>
+        <member name="M:Intuit.Ipp.Utility.ICompressor.Decompress(System.IO.Stream)">
+            <summary>
+            Decompresses the output response stream.
+            </summary>
+            <param name="responseStream">Response stream.</param>
+            <returns>Decompressed stream.</returns>
         </member>
         <member name="T:Intuit.Ipp.Utility.IEntitySerializer">
             <summary>

@@ -4,6 +4,381 @@
         <name>Intuit.Ipp.Data</name>
     </assembly>
     <members>
+        <member name="T:Intuit.Ipp.Data.EntitlementsResponse">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.QboCompany">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.PlanName">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.MaxUsers">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.CurrentUsers">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.DaysRemainingTrial">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponse.Entitlement">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.EntitlementsResponseEntitlement">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponseEntitlement.name">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponseEntitlement.term">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.EntitlementsResponseEntitlement.id">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.EntitlementsResponseEntitlementTerm">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.EntitlementsResponseEntitlementTerm.On">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.EntitlementsResponseEntitlementTerm.Off">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.CascadeResponse">
+            <remarks/>
+            <summary>
+            Product: QBO Description: Holder for a collection of Cascade objects. Used by messaging. Not intended for external clients.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.CascadeResponse.Cascade">
+            <remarks/>
+            <summary>
+            Cascading events for an entity
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Cascade">
+            <remarks/>
+            <summary>
+            Product: QBO Description: Object representing cascading events on entities resulting from a transaction event. Used by messaging. Not intended for external clients.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Cascade.EntityName">
+            <remarks/>
+            <summary>
+            Any IntuitEntity derived object name like Customer, Item, Invoice, ...
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Cascade.Id">
+            <remarks/>
+            <summary>
+            Description: Unique identifier for an Intuit entity.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Cascade.KeyValue">
+            <remarks/>
+            <summary>
+            Cascading events resulting from a transaction event in the form of key value pairs. Key names are user defined.
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.NameValue">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: A name/value pair that allows the client to include data that is meaningful in the domain of origin, outside of the Intuit domain.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.NameValue.Name">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Name of the element.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.NameValue.Value">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Value of the element.
+            
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Summary">
+            <remarks/>
+            <summary>
+            Group Summary
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Summary.ColData">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.ColData">
+            <remarks/>
+            <summary>
+            One ColData can contain one column
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ColData.Attributes">
+            <remarks/>
+            <summary>
+            Describes the column attributes
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ColData.value">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ColData.id">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ColData.href">
+            <remarks/>
+            <summary>
+            Reference url
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Attribute">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Attribute.Type">
+            <remarks/>
+            <summary>
+            Describes the Name
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Attribute.Value">
+            <remarks/>
+            <summary>
+            Describes the Value
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Rows">
+            <remarks/>
+            <summary>
+            List of rows
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Rows.Row">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Row">
+            <remarks/>
+            <summary>
+            One Row can contain any number of columns
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.id">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.parentId">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.AnyIntuitObjects">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.ItemsElementName">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.type">
+            <remarks/>
+            <summary>
+            Row type section, summary, data row etc..
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.typeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Row.group">
+            <remarks/>
+            <summary>
+            Report Group Income, Expense, COGS etc..
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Header">
+            <remarks/>
+            <summary>
+            Group Header
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Header.ColData">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.ItemsChoiceType1">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.ColData">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Header">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Rows">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Summary">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.RowTypeEnum">
+            <remarks/>
+            <summary>
+            List of all row types
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.RowTypeEnum.Section">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.RowTypeEnum.Data">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.OLBStatus">
+            <remarks/>
+            <summary>
+            Describes list of OLBAccounts that needs to be
+            enabled or disabled
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBStatus.OLBAccount">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Account details
+            
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.OLBAccount">
+            <remarks/>
+            <summary>
+            Describes OLBAccount details
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.AccountId">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: AccountId to be enabled or disabled
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.AccountDetails">
+            <remarks/>
+            <summary>
+            Account details that contains possibly credit
+            card number, last 5 digits
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.SubscribedToApp">
+            <remarks/>
+            <summary>
+            True when the AccountId is linked to an IPP app
+            and false when the AccountId is delinked from the IPP app
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.SubscribedToAppSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.AppVersion">
+            <remarks/>
+            <summary>
+            Specifies which version is being used (such as v1
+            or v2). This field is optional.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.LastBankBalance">
+            <remarks/>
+            <summary>
+            The last bank balance. This field is optional.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.OLBAccount.LastBankBalanceSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.ReferenceType">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Reference type of all IDs that are taken as input or output.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ReferenceType.name">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ReferenceType.type">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ReferenceType.Value">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Warning">
+            <remarks/>
+            <summary>
+            Detailed data about a warning condition that occurred when a request was processed
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Warning.Message">
+            <remarks/>
+            <summary>
+            Localized standard message associated with the warning
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Warning.Detail">
+            <remarks/>
+            <summary>
+            Detailed message regarding the warning condition with specifics
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Warning.code">
+            <remarks/>
+            <summary>
+            Warning code, this is a required field
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Warning.element">
+            <remarks/>
+            <summary>
+            The element (if any) directly involved in the warning (i.e. an ignored element)
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.Column">
+            <remarks/>
+            <summary>
+            Describes a column
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Column.ColTitle">
+            <remarks/>
+            <summary>
+            Describes the column title name
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Column.ColType">
+            <remarks/>
+            <summary>
+            Describes the column type enumeration
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Column.MetaData">
+            <remarks/>
+            <summary>
+            Column Metadata
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Column.Columns">
+            <remarks/>
+            <summary>
+            Subcolumns of the column
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Data.AcquiredAsEnum">
             <remarks/>
             <summary>
@@ -173,6 +548,9 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.ItemTypeEnum.TaxGroup">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemTypeEnum.Bundle">
             <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.CustomerTypeEnum">
@@ -540,6 +918,9 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.EquipmentRentalCos">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.EstimatedTaxes">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExchangeGainOrLoss">
             <remarks/>
         </member>
@@ -547,6 +928,27 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FinanceCosts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetComputers">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetCopiers">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetFurniture">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetPhone">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetPhotoVideo">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetSoftware">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FixedAssetOtherToolsEquipment">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FurnitureAndFixtures">
@@ -561,7 +963,22 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GlobalTaxSuspense">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GasAndFuel">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Goodwill">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Gratuity">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Healthcare">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.HomeOffice">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.HomeownerRentalInsurance">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Insurance">
@@ -630,6 +1047,9 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.MoneyMarket">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.MortgageInterestHomeOffice">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.NonProfitIncome">
             <remarks/>
         </member>
@@ -645,6 +1065,9 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OrganizationalCosts">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherBusinessExpenses">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherCostsOfServiceCos">
             <remarks/>
         </member>
@@ -655,6 +1078,9 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherFixedAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherHomeOfficeExpenses">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherInvestmentIncome">
@@ -678,10 +1104,16 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherPrimaryIncome">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherVehicleExpenses">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OwnersEquity">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PaidInCapitalOrSurplus">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ParkingAndTolls">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PartnerContributions">
@@ -705,6 +1137,12 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PenaltiesSettlements">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PersonalExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PersonalIncome">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PreferredStock">
             <remarks/>
         </member>
@@ -717,6 +1155,9 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PromotionalMeals">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RentAndLeaseHomeOffice">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RentOrLeaseOfBuildings">
             <remarks/>
         </member>
@@ -724,6 +1165,9 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RentsInTrustLiability">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RepairsAndMaintainceHomeOffice">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RepairMaintenance">
@@ -801,7 +1245,421 @@
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Utilities">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.UtilitiesHomeOffice">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Vehicle">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleInsurance">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleLease">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleLoan">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleLoanInterest">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleRegistration">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.VehicleRepairs">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Vehicles">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WashAndRoadServices">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WithholdingTaxSales">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WithholdingTaxPurchases">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WithholdingAssetAmount">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WithholdingLiabilityAmount">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.WithholdingTaxSuspense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DevelopmentCosts1">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionsCurrentAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherConsumables">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExpenditureAuthorisationsAndLettersOfCredit">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.InternalTransfers">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionsFixedAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AssetsInCourseOfConstruction">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ParticipatingInterests">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CumulativeDepreciationOnIntangibleAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionsNonCurrentAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OutstandingDuesMicroSmallEnterprise">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OutstandingDuesOtherThanMicroSmallEnterprise">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GlobalTaxRefund">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GlobalTaxDeferred">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionsCurrentLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.StaffAndRelatedLiabilityAccounts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.SocialSecurityAgencies">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.SundryDebtorsAndCreditors">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionsNonCurrentLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DebtsRelatedToParticipatingInterests">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.StaffAndRelatedLongTermLiabilityAccounts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GovernmentAndOtherPublicAuthorities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GroupAndAssociates">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.InvestmentGrants">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CashReceiptIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OwnWorkCapitalized">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OperatingGrants">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherCurrentOperatingIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CostOfSales">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CashExpenditureExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExternalServices">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherExternalServices">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PurchasesRebates">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherRentalCosts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProjectStudiesSurveysAssessments">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Sundry">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.StaffCosts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherCurrentOperatingCharges">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExtraordinaryCharges">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AppropriationsToDepreciation">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AccrualsAndDeferredIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CurrentTaxLiability">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DeferredTax">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DistributionCosts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Investments">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LongTermBorrowings">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherIntangibleAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PrepaymentsAndAccruedIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShortTermBorrowings">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionForLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CalledUpShareCapital">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CalledUpShareCapitalNotPaid">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LandAsset">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AvailableForSaleFinancialAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ProvisionForWarrantyObligations">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CurrentPortionEmployeeBenefitsObligations">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LongTermEmployeeBenefitObligations">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ObligationsUnderFinanceLeases">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.BankLoans">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.InterestPayables">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GainLossOnSaleOfInvestments">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.GainLossOnSaleOfFixedAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShareCapital">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CurrentPortionOfObligationsUnderFinanceLeases">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AssetsHeldForSale">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AccruedLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AccruedLongLermLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AccruedVacationPayable">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CashAndCashEquivalents">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CommissionsAndFees">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AmortizationExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LossOnDiscontinuedOperationsNetOfTax">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ManagementCompensation">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherSellingExpenses">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LiabilitiesRelatedToAssetsHeldForSale">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LongTermDebit">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.EquityInEarningsOfSubsiduaries">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherOperatingIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.RevenueGeneral">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DividendDisbursed">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.FreightAndDeliveryCos">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShippingAndDeliveryExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.TravelExpensesGeneralAndAdminExpenses">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.TravelExpensesSellingExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.UnrealisedLossOnSecuritiesNetOfTax">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.SalesRetail">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.SalesWholesale">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AccumulatedOtherComprehensiveIncome">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.AssetsAvailableForSale">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LossOnDisposalOfAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.NonCurrentAssets">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.IncomeTaxExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LongTermInvestments">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DividendsPayable">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.TradeAndOtherReceivables">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.TradeAndOtherPayables">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CurrentLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.SavingsByTaxScheme">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.BorrowingCost">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Depletion">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExceptionalItems">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.PriorPeriodItems">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ExtraordinaryItems">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.MatCredit">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherFreeReserves">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CapitalReserves">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.Funds">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.MoneyReceivedAgainstShareWarrants">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShareApplicationMoneyPendingAllotment">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DeferredTaxLiabilities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherLongTermProvisions">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.CapitalWip">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.IntangibleAssetsUnderDevelopment">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherLongTermInvestments">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.LongTermLoansAndAdvancesToRelatedParties">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherLongTermLoansAndAdvances">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShortTermInvestmentsInRelatedParties">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.OtherEarmarkedBankAccounts">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.ShortTermLoansAndAdvancesToRelatedParties">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DeferredTaxExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.IncomeTaxOtherExpense">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.DutiesAndTaxes">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.BalWithGovtAuthorities">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AccountSubTypeEnum.TaxRoundoffGainOrLoss">
             <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.APCreditCardOperationEnum">
@@ -2555,6 +3413,48 @@
         <member name="F:Intuit.Ipp.Data.DesktopEntityTypeEnum.PREFERENCES">
             <remarks/>
         </member>
+        <member name="T:Intuit.Ipp.Data.TaxReturnStatusEnum">
+            <remarks/>
+            <summary>
+            Enumeration of the filing status that a TaxReturn can have
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.TaxReturnStatusEnum.FILED">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.TaxReturnStatusEnum.FILING_FAILED">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.TaxReturnStatusEnum.FILING_FAILED_WRONG_AGENCY_CREDENTIALS">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.TaxReturnStatusEnum.AGENCY_PAYMENT_INITIATED">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.TaxReturnStatusEnum.AGENCY_PAYMENT_COMPLETED">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.AgencyPaymentMethodEnum">
+            <remarks/>
+            <summary>
+            Enumeration of payment methods that can be used to pay tax agency
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AgencyPaymentMethodEnum.ACH_CREDIT">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AgencyPaymentMethodEnum.ACH_DEBIT">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AgencyPaymentMethodEnum.CHECK">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AgencyPaymentMethodEnum.WIRE">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.AgencyPaymentMethodEnum.OTHER">
+            <remarks/>
+        </member>
         <member name="T:Intuit.Ipp.Data.LinkedTxn">
             <remarks/>
             <summary>
@@ -2599,339 +3499,6 @@
             line of the LinkedTxn. If supplied the LinkedTxn field must also
             be populated.
             
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.CascadeResponse">
-            <remarks/>
-            <summary>
-            Product: QBO Description: Holder for a collection of Cascade objects. Used by messaging. Not intended for external clients.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.CascadeResponse.Cascade">
-            <remarks/>
-            <summary>
-            Cascading events for an entity
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Cascade">
-            <remarks/>
-            <summary>
-            Product: QBO Description: Object representing cascading events on entities resulting from a transaction event. Used by messaging. Not intended for external clients.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Cascade.EntityName">
-            <remarks/>
-            <summary>
-            Any IntuitEntity derived object name like Customer, Item, Invoice, ...
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Cascade.Id">
-            <remarks/>
-            <summary>
-            Description: Unique identifier for an Intuit entity.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Cascade.KeyValue">
-            <remarks/>
-            <summary>
-            Cascading events resulting from a transaction event in the form of key value pairs. Key names are user defined.
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.NameValue">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: A name/value pair that allows the client to include data that is meaningful in the domain of origin, outside of the Intuit domain.
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.NameValue.Name">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: Name of the element.
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.NameValue.Value">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: Value of the element.
-            
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Summary">
-            <remarks/>
-            <summary>
-            Group Summary
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Summary.ColData">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.ColData">
-            <remarks/>
-            <summary>
-            One ColData can contain one column
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ColData.Attributes">
-            <remarks/>
-            <summary>
-            Describes the column attributes
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ColData.value">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ColData.id">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ColData.href">
-            <remarks/>
-            <summary>
-            Reference url
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Attribute">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Attribute.Type">
-            <remarks/>
-            <summary>
-            Describes the Name
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Attribute.Value">
-            <remarks/>
-            <summary>
-            Describes the Value
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Rows">
-            <remarks/>
-            <summary>
-            List of rows
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Rows.Row">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Row">
-            <remarks/>
-            <summary>
-            One Row can contain any number of columns
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.id">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.parentId">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.AnyIntuitObjects">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.ItemsElementName">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.type">
-            <remarks/>
-            <summary>
-            Row type section, summary, data row etc..
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.typeSpecified">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Row.group">
-            <remarks/>
-            <summary>
-            Report Group Income, Expense, COGS etc..
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Header">
-            <remarks/>
-            <summary>
-            Group Header
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Header.ColData">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.ItemsChoiceType1">
-            <remarks/>
-        </member>
-        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.ColData">
-            <remarks/>
-        </member>
-        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Header">
-            <remarks/>
-        </member>
-        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Rows">
-            <remarks/>
-        </member>
-        <member name="F:Intuit.Ipp.Data.ItemsChoiceType1.Summary">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.RowTypeEnum">
-            <remarks/>
-            <summary>
-            List of all row types
-            </summary>
-        </member>
-        <member name="F:Intuit.Ipp.Data.RowTypeEnum.Section">
-            <remarks/>
-        </member>
-        <member name="F:Intuit.Ipp.Data.RowTypeEnum.Data">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.OLBStatus">
-            <remarks/>
-            <summary>
-            Describes list of OLBAccounts that needs to be
-            enabled or disabled
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBStatus.OLBAccount">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: Account details
-            
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.OLBAccount">
-            <remarks/>
-            <summary>
-            Describes OLBAccount details
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.AccountId">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: AccountId to be enabled or disabled
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.AccountDetails">
-            <remarks/>
-            <summary>
-            Account details that contains possibly credit
-            card number, last 5 digits
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.SubscribedToApp">
-            <remarks/>
-            <summary>
-            True when the AccountId is linked to an IPP app
-            and false when the AccountId is delinked from the IPP app
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.SubscribedToAppSpecified">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.AppVersion">
-            <remarks/>
-            <summary>
-            Specifies which version is being used (such as v1
-            or v2). This field is optional.
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.LastBankBalance">
-            <remarks/>
-            <summary>
-            The last bank balance. This field is optional.
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.OLBAccount.LastBankBalanceSpecified">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.ReferenceType">
-            <remarks/>
-            <summary>
-            
-            Product: ALL
-            Description: Reference type of all IDs that are taken as input or output.
-            
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ReferenceType.name">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ReferenceType.type">
-            <remarks/>
-        </member>
-        <member name="P:Intuit.Ipp.Data.ReferenceType.Value">
-            <remarks/>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Warning">
-            <remarks/>
-            <summary>
-            Detailed data about a warning condition that occurred when a request was processed
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Warning.Message">
-            <remarks/>
-            <summary>
-            Localized standard message associated with the warning
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Warning.Detail">
-            <remarks/>
-            <summary>
-            Detailed message regarding the warning condition with specifics
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Warning.code">
-            <remarks/>
-            <summary>
-            Warning code, this is a required field
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Warning.element">
-            <remarks/>
-            <summary>
-            The element (if any) directly involved in the warning (i.e. an ignored element)
-            </summary>
-        </member>
-        <member name="T:Intuit.Ipp.Data.Column">
-            <remarks/>
-            <summary>
-            Describes a column
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Column.ColTitle">
-            <remarks/>
-            <summary>
-            Describes the column title name
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Column.ColType">
-            <remarks/>
-            <summary>
-            Describes the column type enumeration
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Column.MetaData">
-            <remarks/>
-            <summary>
-            Column Metadata
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.Data.Column.Columns">
-            <remarks/>
-            <summary>
-            Subcolumns of the column
             </summary>
         </member>
         <member name="T:Intuit.Ipp.Data.QbdtEntityIdMapping">
@@ -4431,6 +4998,18 @@
             document
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.CompanyInfo.FifoCalculationStatus">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Status of the Inventory Lots and Accounts Calculation for STQ imported company.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.CompanyInfo.FifoCalculationStatusSpecified">
+            <remarks/>
+        </member>
         <member name="P:Intuit.Ipp.Data.CompanyInfo.CompanyInfoEx">
             <remarks/>
             <summary>
@@ -4439,6 +5018,27 @@
             Description: Internal use only: extension place holder for Company.
             
             </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.FifoCalculationStatus">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Enumeration of Inventory Lots and Accounts calculation
+            
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.FifoCalculationStatus.None">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.FifoCalculationStatus.InProgress">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.FifoCalculationStatus.Completed">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.FifoCalculationStatus.Error">
+            <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.Transaction">
             <remarks/>
@@ -4964,6 +5564,16 @@
             
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.MarkupInfo.MarkUpIncomeAccountRef">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: An account associated with markup info.
+            Cannot be updated or modified.
+            
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Data.DepositLineDetail">
             <remarks/>
             <summary>
@@ -5476,6 +6086,16 @@
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Data.ItemLineDetail.TaxCodeRef">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Reference to the
+            SalesTaxCode for this item.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.ItemLineDetail.TaxClassificationRef">
             <remarks/>
             <summary>
             
@@ -6307,6 +6927,32 @@
             
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.SalesTransaction.FreeFormAddress">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Specifies whether
+            shipping address is in free-form or structured-form (city/state etc.)
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesTransaction.FreeFormAddressSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesTransaction.ShipFromAddr">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: QBO: Shipping from address
+            of the Invoice.[br]See [a
+            href="http://ipp.developer.intuit.com/0010_Intuit_Partner_Platform/0060_Financial_Management_Services_(v3)/01000_Using_Data_Service_Entities#Addresses"]Addresses[/a]
+            Description: QBW: Identifies the address where the goods are shipped
+            from. For transactions without shipping, it represents the address where the sale took place.
+            
+            </summary>
+        </member>
         <member name="P:Intuit.Ipp.Data.SalesTransaction.RemitToRef">
             <remarks/>
             <summary>
@@ -6776,6 +7422,16 @@
             to the NotaFiscal created for the salesTransaction.
             ValidRange:
             QBO: max=30
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesTransaction.TaxExemptionRef">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Reference to the
+            TaxExemptionId and TaxExemptionReason for this customer.
             
             </summary>
         </member>
@@ -7568,6 +8224,28 @@
             
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Invoice.LessCIS">
+            <remarks/>
+            <summary>
+            
+            Product: All
+            Description: QBO: Indicates the
+            less cis amount of the transaction, specific to UK region companies
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Invoice.LessCISSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Invoice.InvoiceLink">
+            <remarks/>
+            <summary>
+            
+            Product: All
+            Description: QBO:  Sharable link of the invoice for external users
+            
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Data.StatusInfo">
             <remarks/>
             <summary>
@@ -7619,6 +8297,19 @@
             Extension entity for SalesReceipt
             
             </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesReceipt.LessCIS">
+            <remarks/>
+            <summary>
+            
+            Product: All
+            Description: QBO: Indicates the
+            less cis amount of the transaction, specific to UK region companies
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesReceipt.LessCISSpecified">
+            <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.Estimate">
             <remarks/>
@@ -8103,6 +8794,19 @@
             </summary>
         </member>
         <member name="P:Intuit.Ipp.Data.TaxCode.ActiveSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxCode.Hidden">
+            <remarks/>
+            <summary>
+            
+            Product: QBW
+            Description: True if Taxcode needs to be hidden. Active tax codes can be hidden from the display using this.
+            Filterable: ALL
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxCode.HiddenSpecified">
             <remarks/>
         </member>
         <member name="P:Intuit.Ipp.Data.TaxCode.Taxable">
@@ -9037,6 +9741,19 @@
             Purchase.
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Purchase.LessCIS">
+            <remarks/>
+            <summary>
+            
+            Product: All
+            Description: QBO: Indicates the
+            less cis amount of the transaction, specific to UK region companies
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Purchase.LessCISSpecified">
+            <remarks/>
+        </member>
         <member name="T:Intuit.Ipp.Data.PurchaseByVendor">
             <remarks/>
             <summary>
@@ -9223,6 +9940,19 @@
             Bill.
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Bill.LessCIS">
+            <remarks/>
+            <summary>
+            
+            Product: All
+            Description: QBO: Indicates the
+            less cis amount of the transaction, specific to UK region companies
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Bill.LessCISSpecified">
+            <remarks/>
+        </member>
         <member name="T:Intuit.Ipp.Data.VendorCredit">
             <remarks/>
             <summary>
@@ -9237,6 +9967,23 @@
             Internal use only: extension place holder for
             Bill extensible element to qualify account.
             </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.VendorCredit.Balance">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: The unpaid amount of the bill. When paid-in-full, balance will
+            be zero.
+            [b]QuickBooks Notes[/b][br /]
+            Non QB-writable.
+            Filterable: QBW
+            Sortable: QBW
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.VendorCredit.BalanceSpecified">
+            <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.StatementCharge">
             <remarks/>
@@ -9773,6 +10520,12 @@
             <summary>
             Internal use only: extension place holder for
             DepartmentEx extensible element
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Department.Address">
+            <remarks/>
+            <summary>
+            Address of the Department
             </summary>
         </member>
         <member name="T:Intuit.Ipp.Data.ItemAssemblyDetail">
@@ -10463,6 +11216,36 @@
             Item
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Item.TaxClassificationRef">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Reference to the
+            SalesTaxCode for this item.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Item.UQCDisplayText">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Unit of measure (UQC) text to be displayed for this line item in Invoice/Sales forms.
+            Applicable for IN Region.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Item.UQCId">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Unit of measure for this line item as per the standard unit (UQC) defined under the GST rule. Example: KGS- kilograms, MTR- metres, SQF-  square feet. It will be shown in GSTR1 report.
+            Applicable for IN Region.
+            
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Data.Term">
             <remarks/>
             <summary>
@@ -11050,6 +11833,16 @@
         </member>
         <member name="P:Intuit.Ipp.Data.CreditMemo.RemainingCreditSpecified">
             <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.CreditMemo.InvoiceRef">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: A credit memo needs to have an invoice number to save successfully
+            Applicable for IN Region.
+            
+            </summary>
         </member>
         <member name="P:Intuit.Ipp.Data.CreditMemo.CreditMemoEx">
             <remarks/>
@@ -12806,6 +13599,12 @@
         <member name="P:Intuit.Ipp.Data.TaxPrefs.PartnerTaxEnabledSpecified">
             <remarks/>
         </member>
+        <member name="P:Intuit.Ipp.Data.TaxPrefs.HideTaxManagement">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxPrefs.HideTaxManagementSpecified">
+            <remarks/>
+        </member>
         <member name="P:Intuit.Ipp.Data.TaxPrefs.AnyIntuitObject">
             <remarks/>
         </member>
@@ -13356,6 +14155,17 @@
             Bcc Email Address for Sales forms
             
             </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesFormsPrefs.EmailCopyToCompany">
+            <remarks/>
+            <summary>
+            
+            Product:QBO
+            Email a Copy to the company for sales form
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.SalesFormsPrefs.EmailCopyToCompanySpecified">
+            <remarks/>
         </member>
         <member name="P:Intuit.Ipp.Data.SalesFormsPrefs.AllowDeposit">
             <remarks/>
@@ -14960,6 +15770,28 @@
         <member name="P:Intuit.Ipp.Data.TaxReturn.FileDateSpecified">
             <remarks/>
         </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentDate">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Date when actual payment to agency occurs
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentDateSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentAmount">
+            <remarks/>
+            <summary>
+            Specifies the payment amount paid to tax agency
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentAmountSpecified">
+            <remarks/>
+        </member>
         <member name="P:Intuit.Ipp.Data.TaxReturn.NetTaxAmountDue">
             <remarks/>
             <summary>
@@ -15000,6 +15832,91 @@
             of which this TaxReturn is a part.
             
             </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.TaxReturnStatus">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Represents the status of the filing of the tax return
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.TaxReturnStatusSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.TaxReturnEFilingFailureReason">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Represents the failure reason of tax return e-filing with agency
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.EFileErrorFixByDate">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Last Date to rectify e-filing errors so that it can be filed in same period.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.EFileErrorFixByDateSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentMethod">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Represents the payment method used while e-filing tax return with agency
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.AgencyPaymentMethodSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxReturn.TaxReturnCode">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Represents the tax return code with the partner
+            
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Data.TaxClassification">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Tax classification segregates different items into different classifications and the tax
+            classification is one of the key parameters to determine appropriate tax on transactions involving items.
+            Tax classifications are sourced by either tax governing authorities as in India/Malaysia or externally like Exactor.
+            "Fuel", "Garments" and "Soft drinks" are a few examples of tax classification in layman terms.
+            User can choose a specific tax classification for an item while creating it.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.Code">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.Name">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.Description">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.Level">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.ParentRef">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.TaxClassification.ApplicableTo">
+            <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.StringTypeCustomFieldDefinition">
             <remarks/>
@@ -15475,6 +16392,9 @@
         <member name="F:Intuit.Ipp.Data.objectNameEnumType.TaxCode">
             <remarks/>
         </member>
+        <member name="F:Intuit.Ipp.Data.objectNameEnumType.TaxClassification">
+            <remarks/>
+        </member>
         <member name="F:Intuit.Ipp.Data.objectNameEnumType.TaxRate">
             <remarks/>
         </member>
@@ -15527,6 +16447,45 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.EmployeeTypeEnum.Statutory">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.SubcontractorTypeEnum">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Valid only for UK region, Subcontractor type enumeration.
+            
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.SubcontractorTypeEnum.Individual">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.SubcontractorTypeEnum.Company">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.SubcontractorTypeEnum.Partnership">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.SubcontractorTypeEnum.Trust">
+            <remarks/>
+        </member>
+        <member name="T:Intuit.Ipp.Data.CISRateEnum">
+            <remarks/>
+            <summary>
+            
+            Product: ALL
+            Description: Valid only for UK region, CIS Rate for Vendor enumeration.
+            
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Data.CISRateEnum.CISgrossrate0">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.CISRateEnum.CISstandardrate20">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.CISRateEnum.CIShigherrate30">
             <remarks/>
         </member>
         <member name="T:Intuit.Ipp.Data.JobStatusEnum">
@@ -16190,6 +17149,66 @@
             
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Customer.TaxExemptionReasonId">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Specifies tax exemption reason to be associated with Customer
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.IsProject">
+            <remarks/>
+            <summary>
+            
+            Product: QBO
+            Description: Specifies whether this customer is a project.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.IsProjectSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.BusinessNumber">
+            <remarks/>
+            <summary>
+            
+            Business Number of the Customer.
+            Applicable to CA/UK/IN versions of QuickBooks. Referred to as PAN in India.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.GSTIN">
+            <remarks/>
+            <summary>
+            
+            GST Identification Number of the Customer.
+            Applicable for IN region only.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.GSTRegistrationType">
+            <remarks/>
+            <summary>
+            
+            GST registration type of the Customer.
+            Applicable for IN region only.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.IsCISContractor">
+            <remarks/>
+            <summary>
+            
+            Product: QBO only
+            Description: True if the customer is CIS contractor
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Customer.IsCISContractorSpecified">
+            <remarks/>
+        </member>
         <member name="T:Intuit.Ipp.Data.ItemChoiceType4">
             <remarks/>
         </member>
@@ -16615,6 +17634,48 @@
             Internal use only: extension place holder for Vendor.
             </summary>
         </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.GSTIN">
+            <remarks/>
+            <summary>
+            
+            GST Identification Number of the Vendor.
+            Applicable for IN region only.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.GSTRegistrationType">
+            <remarks/>
+            <summary>
+            
+            GST registration type of the Vendor.
+            Applicable for IN region only.
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.IsSubContractor">
+            <remarks/>
+            <summary>
+            
+            Product: QBO only
+            Description: True if the vendor is subcontractor
+            
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.IsSubContractorSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.SubcontractorType">
+            <remarks/>
+            <summary>
+            Specifies the Subcontractor type. Applicable only for UK region, values are defined in the SubcontractorTypeEnum.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Vendor.CISRate">
+            <remarks/>
+            <summary>
+            Specifies the CIS Rate. Applicable only for UK region, values are defined in the CISRateEnum.
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Data.CustomerType">
             <remarks/>
             <summary>
@@ -16783,6 +17844,13 @@
             <remarks/>
             <summary>
             Internal use only: extension place holder for Employee.
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Data.Employee.V4IDPseudonym">
+            <remarks/>
+            <summary>
+            Auto generated Public ID when new employee added to QBO. (ReadOnly)
+            
             </summary>
         </member>
         <member name="T:Intuit.Ipp.Data.JobType">
@@ -17942,6 +19010,9 @@
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.ItemChoiceType6.TaxAgency">
+            <remarks/>
+        </member>
+        <member name="F:Intuit.Ipp.Data.ItemChoiceType6.TaxClassification">
             <remarks/>
         </member>
         <member name="F:Intuit.Ipp.Data.ItemChoiceType6.TaxCode">

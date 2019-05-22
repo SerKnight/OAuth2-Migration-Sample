@@ -10,6 +10,21 @@
             Intuit services. By default it provides OAuth and user name validators. It can also use other Authorize methods such as SAML, OpenID, etc., to validate Intuit service requests.
             </summary>
         </member>
+        <member name="T:Intuit.Ipp.Security.EnvironmentForMigration">
+            <summary>
+            Define environments for migration
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Security.EnvironmentForMigration.Sandbox">
+            <summary>
+            Sandbox environment
+            </summary>
+        </member>
+        <member name="F:Intuit.Ipp.Security.EnvironmentForMigration.Production">
+            <summary>
+            Production environment
+            </summary>
+        </member>
         <member name="T:Intuit.Ipp.Security.IRequestValidator">
             <summary>
             Interface for request validate
@@ -22,12 +37,171 @@
             <param name="webRequest">The web request.</param>
             <param name="requestBody">The request body.</param>
         </member>
-        <member name="M:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper.GetOAuth2Tokens(System.String,Intuit.Ipp.Security.OAuthRequestValidator)">
+        <member name="T:Intuit.Ipp.Security.MigratedTokenResponse">
+            <summary>
+            Helper class for deserializing the migration api response
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigratedTokenResponse.#ctor(System.String)">
+            <summary>
+            Handles success raw response from Token api call
+            </summary>
+            <param name="raw">raw</param>
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigratedTokenResponse.#ctor(System.Exception)">
+            <summary>
+            Handles exception response from Token api call
+            </summary>
+            <param name="exception">exception</param>
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigratedTokenResponse.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Handles exception response from Token api call
+            </summary>
+            <param name="statusCode">statusCode</param>
+            <param name="reason">reason</param> 
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.Raw">
+            <summary>
+            Raw json response from Migration api call 
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.Json">
+            <summary>
+            Json object
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.Exception">
+            <summary>
+            Exception
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.IsError">
+            <summary>
+            Chekc if there is an error response
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.ErrorType">
+            <summary>
+            ErrorType
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.HttpStatusCode">
+            <summary>
+            HttpStatusCode
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.HttpErrorReason">
+            <summary>
+            HttpErrorReason
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.AccessToken">
+            <summary>
+            Returns AccessToken
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.IdentityToken">
+            <summary>
+            Returns IdToken
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.TokenType">
+            <summary>
+            Returns TokenType
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.RefreshToken">
+            <summary>
+            Returns RefreshToken
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.RealmId">
+            <summary>
+            Returns RealmId
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.ErrorDescription">
+            <summary>
+            Returns ErrorDescription
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.AccessTokenExpiresIn">
+            <summary>
+            Returns Access Token expiry value
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.RefreshTokenExpiresIn">
+            <summary>
+            Returns RefreshToken Expiry Value
+            </summary>   
+        </member>
+        <member name="P:Intuit.Ipp.Security.MigratedTokenResponse.Error">
+            <summary>
+            Handles error
+            </summary>   
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigratedTokenResponse.TryGet(System.String)">
+            <summary>
+            Helper to get Name
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Security.MigrationJObjectExtensions">
+            <summary>
+            Json Object extension
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigrationJObjectExtensions.TryGetString(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            Helper for Json object 
+            </summary>
+            <param name="json">json</param>
+            <param name="name">name</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Intuit.Ipp.Security.MigrationJObjectExtensions.TryGetValue(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            Helper for Json object
+            </summary>
+            <param name="json">json</param>
+            <param name="name">name</param>
+            <returns>JToken</returns>
+        </member>
+        <member name="T:Intuit.Ipp.Security.MigrationResponseErrorType">
+            <summary>
+            Enum for Response Error
+            </summary>
+        </member>
+        <member name="T:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper">
+            <summary>
+            Oauth1 to Oauth2 Token Migration Helper class
+            </summary>
+        </member>
+        <member name="P:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper.Environment">
+            <summary>
+            Add environement for migration
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper.#ctor(Intuit.Ipp.Security.EnvironmentForMigration)">
+            <summary>
+            Constructor with environment setting
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper.#ctor">
+            <summary>
+            Constructor with environment setting defaulted to Prod
+            </summary>
+        </member>
+        <member name="M:Intuit.Ipp.Security.OAuth1ToOAuth2TokenMigrationHelper.GetOAuth2Tokens(System.String,System.String,System.String,System.String,Intuit.Ipp.Security.OAuthRequestValidator)">
             <summary>
             Authorizes the specified request.
             </summary>
-            <param name="scopes">Scopes of the app to be migrated</param>
-            <param name="oauthRequestValidator">The Oauth request validator.</param>
+            <param name="scopes"></param>
+            <param name="redirectUrl"></param>
+            <param name="clientId"></param>
+            <param name="clientSecret"></param>
+            <param name="oauthRequestValidator"></param>
+            <returns>Json response</returns>
         </member>
         <member name="T:Intuit.Ipp.Security.OAuth2RequestValidator">
             <summary>
@@ -48,7 +222,7 @@
             <summary>
             Initializes a new instance of the <see cref="T:Intuit.Ipp.Security.OAuth2RequestValidator"/> class.
             </summary>
-            <param name="accessToken">The bearer access token.</param>        
+            <param name="accessToken">The bearer access token.</param>
         </member>
         <member name="P:Intuit.Ipp.Security.OAuth2RequestValidator.AccessToken">
             <summary>
@@ -102,7 +276,7 @@
             </summary>
             <param name="accessToken">The access token.</param>
             <param name="accessTokenSecret">The access token secret.</param>
-            <param name="consumerKey">The consumer key.</param> 
+            <param name="consumerKey">The consumer key.</param>
             <param name="consumerSecret">The consumer secret.</param>
         </member>
         <member name="M:Intuit.Ipp.Security.OAuthRequestValidator.#ctor(System.String)">
